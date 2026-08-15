@@ -174,7 +174,12 @@ function ServiceIcon({ variant }) {
   }
 }
 
-function ServiceCard({ service, visible, delayClass }) {
+function ServiceCard({ service, index }) {
+  const [cardRef, visible] = useScrollReveal({
+    threshold: 0.1,
+    rootMargin: '0px 0px -30px 0px',
+  })
+
   const card = (
     <>
       {/* Visual Image Header */}
@@ -212,14 +217,14 @@ function ServiceCard({ service, visible, delayClass }) {
     </>
   )
 
-  const className = `service-card group reveal ${delayClass} ${visible ? 'is-visible' : ''} flex flex-col h-full`
+  const className = `service-card service-card-reveal delay-${index % 6} ${visible ? 'is-visible' : ''} group flex flex-col h-full rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_20px_rgba(1,44,100,0.06)] hover:border-gc-blue/40 hover:shadow-[0_20px_40px_rgba(0,127,252,0.15)] overflow-hidden`
 
   return service.link ? (
-    <Link key={service.id} to={service.link} className={className}>
+    <Link ref={cardRef} key={service.id} to={service.link} className={className}>
       {card}
     </Link>
   ) : (
-    <div key={service.id} className={className}>
+    <div ref={cardRef} key={service.id} className={className}>
       {card}
     </div>
   )
@@ -276,10 +281,13 @@ function ServicesHero() {
 }
 
 function FeaturedServiceCard({ service }) {
+  const [cardRef, visible] = useScrollReveal({ threshold: 0.1, rootMargin: '0px 0px -30px 0px' })
+
   return (
     <Link
+      ref={cardRef}
       to={service.link}
-      className="group relative block overflow-hidden rounded-3xl bg-gc-navy shadow-xl shadow-gc-navy/20 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-gc-blue/20"
+      className={`service-card-reveal ${visible ? 'is-visible' : ''} group relative block overflow-hidden rounded-3xl bg-gc-navy shadow-xl shadow-gc-navy/20 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-gc-blue/20`}
     >
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,127,252,0.25),transparent_55%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.06),transparent_50%)]"
@@ -319,11 +327,17 @@ function FeaturedServiceCard({ service }) {
   )
 }
 
-function ModernServiceCard({ service, index, visible, delayClass }) {
+function ModernServiceCard({ service, index }) {
+  const [cardRef, visible] = useScrollReveal({
+    threshold: 0.1,
+    rootMargin: '0px 0px -30px 0px',
+  })
+
   return (
     <Link
+      ref={cardRef}
       to={service.link}
-      className={`group reveal ${delayClass} ${visible ? 'is-visible' : ''} relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_20px_rgba(1,44,100,0.06)] transition-all duration-500 hover:-translate-y-2 hover:border-gc-blue/40 hover:shadow-[0_20px_40px_rgba(0,127,252,0.15)]`}
+      className={`service-card service-card-reveal delay-${index % 6} ${visible ? 'is-visible' : ''} group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_20px_rgba(1,44,100,0.06)] hover:border-gc-blue/40 hover:shadow-[0_20px_40px_rgba(0,127,252,0.15)]`}
     >
       <div className="relative w-full aspect-[3/2] overflow-hidden bg-[#070b19]">
         <img
@@ -444,7 +458,6 @@ function ExploreLinks() {
 }
 
 function ServicesPageLayout() {
-  const [gridRef, gridVisible] = useScrollReveal()
   const [processRef, processVisible] = useScrollReveal()
 
   const featured = SERVICES.find((s) => s.featured) ?? SERVICES[0]
@@ -470,14 +483,12 @@ function ServicesPageLayout() {
             </p>
           </div>
 
-          <div ref={gridRef} className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {rest.map((service, index) => (
               <ModernServiceCard
                 key={service.id}
                 service={service}
                 index={index}
-                visible={gridVisible}
-                delayClass={CARD_REVEAL_DELAYS[index] ?? 'reveal-delay-3'}
               />
             ))}
           </div>
@@ -496,7 +507,6 @@ function ServicesPageLayout() {
 
 function HomeServicesSection() {
   const [headerRef, headerVisible] = useScrollReveal({ threshold: 0.1, rootMargin: '0px' })
-  const [gridRef, gridVisible] = useScrollReveal()
 
   return (
     <section id="services" className="services-section pt-12 pb-14 lg:pt-16 lg:pb-20">
@@ -527,13 +537,12 @@ function HomeServicesSection() {
           </p>
         </div>
 
-        <div ref={gridRef} className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service, index) => (
             <ServiceCard
               key={service.id}
               service={service}
-              visible={gridVisible}
-              delayClass={CARD_REVEAL_DELAYS[index] ?? 'reveal-delay-3'}
+              index={index}
             />
           ))}
         </div>
