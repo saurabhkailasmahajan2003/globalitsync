@@ -1,64 +1,88 @@
 import { Link, useLocation } from 'react-router-dom'
-import ServiceCardBg from './ServiceCardBg.jsx'
 import { useScrollReveal } from '../hooks/useScrollReveal.js'
 import { SERVICE_PAGE_LINKS } from '../config/servicePages.js'
 import { BTN_PRIMARY } from '../config/ui.js'
 
+import aiAutomationImg from '../assets/AI Automation.png'
+import webDevImg from '../assets/web development.png'
+import appDevImg from '../assets/appdevelopment.png'
+import aimlImg from '../assets/aiml.png'
+import aiAgentsImg from '../assets/AIagents.png'
+import cloudServicesImg from '../assets/cloudservices.png'
+
 const SERVICES = [
   {
     id: 'ai-automation',
-    bg: 'ai-agents',
+    bg: 'ai-automation',
+    category: 'AI & Automation',
     title: 'AI Automation for Businesses',
     link: '/it-consulting',
+    image: aiAutomationImg,
     description:
       'Intelligent workflow automation, process optimization, and AI-powered integrations that reduce manual work and help businesses scale.',
     highlights: ['Workflow automation', 'AI integrations', 'Process optimization'],
+    badge: 'Popular',
     featured: true,
   },
   {
     id: 'web',
     bg: 'web',
+    category: 'Web Engineering',
     title: 'Website Development',
     link: '/web-development-services',
+    image: webDevImg,
     description:
       'Responsive, fast, and SEO-optimized websites built with modern frameworks like React, Next.js, and Node.js.',
-    highlights: ['React & Next.js', 'SEO-ready', 'Performance'],
+    highlights: ['React & Next.js', 'SEO-ready', 'High Performance'],
+    badge: 'High Speed',
   },
   {
     id: 'app',
     bg: 'app',
+    category: 'Mobile Apps',
     title: 'App Development',
     link: '/mobile-app-development',
+    image: appDevImg,
     description:
       'Native and cross-platform mobile apps for iOS and Android using React Native, Flutter, and Swift/Kotlin.',
     highlights: ['iOS & Android', 'React Native', 'Flutter'],
+    badge: 'iOS & Android',
   },
   {
     id: 'ai-ml',
     bg: 'ai-ml',
+    category: 'Data & Intelligence',
     title: 'AI / ML Projects',
     link: '/ai-ml-projects',
+    image: aimlImg,
     description:
       'Custom machine learning models, data pipelines, and predictive analytics tailored to your business data.',
-    highlights: ['Custom models', 'Data pipelines', 'Analytics'],
+    highlights: ['Custom models', 'Data pipelines', 'Predictive analytics'],
+    badge: 'Custom AI',
   },
   {
     id: 'ai-agents',
     bg: 'ai-agents',
+    category: 'Autonomous AI',
     title: 'AI Agents',
     link: '/ai-agents',
+    image: aiAgentsImg,
     description:
       'Intelligent autonomous agents for customer support, workflow automation, and decision-making at scale.',
-    highlights: ['Support agents', 'Workflow bots', 'Copilots'],
+    highlights: ['Support agents', 'Workflow bots', 'Autonomous copilots'],
+    badge: 'Trending',
   },
   {
     id: 'cloud',
     bg: 'cloud',
+    category: 'DevOps & Cloud',
     title: 'Cloud Services',
     link: '/aws-cloud-services',
+    image: cloudServicesImg,
     description:
       'Cloud architecture, DevOps, and managed infrastructure on AWS, Azure, and GCP with 99.9% uptime.',
-    highlights: ['AWS & Azure', 'DevOps', 'Infrastructure'],
+    highlights: ['AWS & Azure', 'DevOps & CI/CD', '99.9% Uptime SLA'],
+    badge: 'Enterprise',
   },
 ]
 
@@ -100,10 +124,10 @@ function ServiceIcon({ variant }) {
           <path
             d="M12 3v3M12 18v3M3 12h3M18 12h3M6.3 6.3l2.1 2.1M15.6 15.6l2.1 2.1M6.3 17.7l2.1-2.1M15.6 8.4l2.1-2.1"
             stroke="currentColor"
-            strokeWidth="1.5"
+            strokeWidth="1.75"
             strokeLinecap="round"
           />
-          <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.75" />
         </svg>
       )
     case 'web':
@@ -112,26 +136,26 @@ function ServiceIcon({ variant }) {
           <path
             d="M4 7h16M4 12h10M4 17h7"
             stroke="currentColor"
-            strokeWidth="1.5"
+            strokeWidth="1.75"
             strokeLinecap="round"
           />
-          <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.75" />
         </svg>
       )
     case 'app':
       return (
         <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M11 18.5h2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" strokeWidth="1.75" />
+          <path d="M11 18.5h2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
         </svg>
       )
     case 'ai-ml':
       return (
         <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <circle cx="6" cy="12" r="2" stroke="currentColor" strokeWidth="1.5" />
-          <circle cx="18" cy="6" r="2" stroke="currentColor" strokeWidth="1.5" />
-          <circle cx="18" cy="18" r="2" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M8 12h8M16.5 7.5l-5 3M11.5 13.5l5 3" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="6" cy="12" r="2" stroke="currentColor" strokeWidth="1.75" />
+          <circle cx="18" cy="6" r="2" stroke="currentColor" strokeWidth="1.75" />
+          <circle cx="18" cy="18" r="2" stroke="currentColor" strokeWidth="1.75" />
+          <path d="M8 12h8M16.5 7.5l-5 3M11.5 13.5l5 3" stroke="currentColor" strokeWidth="1.75" />
         </svg>
       )
     case 'cloud':
@@ -140,7 +164,7 @@ function ServiceIcon({ variant }) {
           <path
             d="M7 18h11a4 4 0 000-8 5.5 5.5 0 00-10.6-1.8A3.5 3.5 0 007 18z"
             stroke="currentColor"
-            strokeWidth="1.5"
+            strokeWidth="1.75"
             strokeLinejoin="round"
           />
         </svg>
@@ -150,30 +174,45 @@ function ServiceIcon({ variant }) {
   }
 }
 
-function LearnMoreLink() {
-  return (
-    <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-gc-blue transition-transform group-hover:translate-x-0.5">
-      Learn more
-      <svg viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor" aria-hidden="true">
-        <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
-      </svg>
-    </span>
-  )
-}
-
 function ServiceCard({ service, visible, delayClass }) {
   const card = (
     <>
-      <ServiceCardBg variant={service.bg} />
-      <div className="relative z-10">
-        <h3 className="text-lg font-bold text-gc-navy">{service.title}</h3>
-        <p className="mt-2 text-sm leading-relaxed text-gc-navy/65">{service.description}</p>
-        {service.link ? <LearnMoreLink /> : null}
+      {/* Visual Image Header */}
+      <div className="relative w-full aspect-[3/2] overflow-hidden bg-[#070b19]">
+        <img
+          src={service.image}
+          alt={service.title}
+          loading="lazy"
+          className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 group-hover:brightness-105"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gc-navy/40 via-transparent to-transparent" />
+      </div>
+
+      {/* Card Body */}
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <h3 className="text-lg font-bold tracking-tight text-gc-navy transition-colors duration-200 group-hover:text-gc-blue sm:text-xl">
+          {service.title}
+        </h3>
+        <p className="mt-2.5 flex-1 text-sm leading-relaxed text-gc-navy/65">
+          {service.description}
+        </p>
+
+        {/* Card Footer Link */}
+        <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+          <span className="text-sm font-semibold text-gc-blue transition-colors group-hover:text-gc-blue/90">
+            Explore service
+          </span>
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gc-blue/10 text-gc-blue transition-all duration-300 group-hover:translate-x-1 group-hover:bg-gc-blue group-hover:text-white">
+            <svg viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+              <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
+            </svg>
+          </span>
+        </div>
       </div>
     </>
   )
 
-  const className = `service-card group reveal ${delayClass} ${visible ? 'is-visible' : ''}`
+  const className = `service-card group reveal ${delayClass} ${visible ? 'is-visible' : ''} flex flex-col h-full`
 
   return service.link ? (
     <Link key={service.id} to={service.link} className={className}>
@@ -240,15 +279,15 @@ function FeaturedServiceCard({ service }) {
   return (
     <Link
       to={service.link}
-      className="group relative block overflow-hidden rounded-3xl bg-gc-navy shadow-xl shadow-gc-navy/20 transition-transform hover:-translate-y-0.5"
+      className="group relative block overflow-hidden rounded-3xl bg-gc-navy shadow-xl shadow-gc-navy/20 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-gc-blue/20"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,127,252,0.22),transparent_55%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.06),transparent_50%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,127,252,0.25),transparent_55%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.06),transparent_50%)]"
         aria-hidden="true"
       />
       <div className="pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-gc-blue/20 blur-3xl" aria-hidden="true" />
 
-      <div className="relative grid gap-8 p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-12 lg:p-10">
+      <div className="relative grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-10 lg:p-10">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white/90">
             <span className="h-1.5 w-1.5 rounded-full bg-gc-blue" />
@@ -260,18 +299,7 @@ function FeaturedServiceCard({ service }) {
             {service.description}
           </p>
 
-          <div className="mt-5 flex flex-wrap gap-2">
-            {service.highlights?.map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white/90"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-
-          <span className={`${BTN_PRIMARY} mt-6`}>
+          <span className={`${BTN_PRIMARY} mt-6 inline-flex`}>
             Explore service
             <svg viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor" aria-hidden="true">
               <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
@@ -279,10 +307,12 @@ function FeaturedServiceCard({ service }) {
           </span>
         </div>
 
-        <div className="hidden h-36 w-36 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-gc-blue lg:flex">
-          <div className="scale-[2]">
-            <ServiceIcon variant={service.bg} />
-          </div>
+        <div className="relative w-full aspect-[3/2] overflow-hidden rounded-2xl border border-white/15 shadow-xl">
+          <img
+            src={service.image}
+            alt={service.title}
+            className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+          />
         </div>
       </div>
     </Link>
@@ -293,38 +323,39 @@ function ModernServiceCard({ service, index, visible, delayClass }) {
   return (
     <Link
       to={service.link}
-      className={`group reveal ${delayClass} ${visible ? 'is-visible' : ''} relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-gc-blue/25 hover:shadow-lg hover:shadow-gc-blue/5 sm:p-7`}
+      className={`group reveal ${delayClass} ${visible ? 'is-visible' : ''} relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_20px_rgba(1,44,100,0.06)] transition-all duration-500 hover:-translate-y-2 hover:border-gc-blue/40 hover:shadow-[0_20px_40px_rgba(0,127,252,0.15)]`}
     >
-      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-gc-blue/80 to-gc-navy/40 opacity-0 transition-opacity group-hover:opacity-100" />
-
-      <div className="flex items-start justify-between gap-4">
-        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gc-blue/10 text-gc-blue transition-colors group-hover:bg-gc-blue group-hover:text-white">
-          <ServiceIcon variant={service.bg} />
-        </div>
-        <span className="text-xs font-bold tracking-widest text-gc-navy/30">
-          {String(index + 1).padStart(2, '0')}
-        </span>
+      <div className="relative w-full aspect-[3/2] overflow-hidden bg-[#070b19]">
+        <img
+          src={service.image}
+          alt={service.title}
+          loading="lazy"
+          className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 group-hover:brightness-105"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gc-navy/40 via-transparent to-transparent" />
       </div>
 
-      <h3 className="mt-5 text-lg font-bold text-gc-navy transition-colors group-hover:text-gc-blue">
-        {service.title}
-      </h3>
-      <p className="mt-2 flex-1 text-sm leading-relaxed text-gc-navy/60">{service.description}</p>
-
-      {service.highlights ? (
-        <div className="mt-4 flex flex-wrap gap-1.5">
-          {service.highlights.slice(0, 2).map((item) => (
-            <span
-              key={item}
-              className="rounded-md bg-[#f7f9fc] px-2 py-0.5 text-[11px] font-medium text-gc-navy/55"
-            >
-              {item}
-            </span>
-          ))}
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <div className="flex items-center justify-between gap-2">
+          <h3 className="text-lg font-bold text-gc-navy transition-colors duration-200 group-hover:text-gc-blue">
+            {service.title}
+          </h3>
+          <span className="text-xs font-bold tracking-widest text-gc-navy/30">
+            {String(index + 1).padStart(2, '0')}
+          </span>
         </div>
-      ) : null}
 
-      <LearnMoreLink />
+        <p className="mt-2.5 flex-1 text-sm leading-relaxed text-gc-navy/65">{service.description}</p>
+
+        <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+          <span className="text-sm font-semibold text-gc-blue">Explore service</span>
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gc-blue/10 text-gc-blue transition-all duration-300 group-hover:translate-x-1 group-hover:bg-gc-blue group-hover:text-white">
+            <svg viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+              <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
+            </svg>
+          </span>
+        </div>
+      </div>
     </Link>
   )
 }
@@ -468,7 +499,7 @@ function HomeServicesSection() {
   const [gridRef, gridVisible] = useScrollReveal()
 
   return (
-    <section id="services" className="services-section pt-10 pb-10 lg:pt-12 lg:pb-12">
+    <section id="services" className="services-section pt-12 pb-14 lg:pt-16 lg:pb-20">
       <div className="services-section-bg" aria-hidden="true">
         <div className="services-section-glow services-section-glow--right" />
         <div className="services-section-glow services-section-glow--left" />
@@ -476,14 +507,23 @@ function HomeServicesSection() {
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
-        <div ref={headerRef} className={`reveal ${headerVisible ? 'is-visible' : ''}`}>
-          <p className="text-sm font-semibold uppercase tracking-widest text-gc-blue">What we do</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-gc-navy sm:text-4xl">
-            Our services
+        <div ref={headerRef} className={`reveal ${headerVisible ? 'is-visible' : ''} max-w-2xl`}>
+          <div className="inline-flex items-center gap-2 rounded-full border border-gc-blue/20 bg-white/90 px-3 py-1 shadow-sm backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-gc-blue shadow-[0_0_8px_rgba(0,127,252,0.6)]" />
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gc-navy">
+              What We Do
+            </span>
+          </div>
+
+          <h2 className="mt-4 text-3xl font-black tracking-tight text-gc-navy sm:text-4xl lg:text-5xl">
+            Our{' '}
+            <span className="bg-gradient-to-r from-gc-blue to-gc-navy bg-clip-text text-transparent">
+              services
+            </span>
           </h2>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-gc-navy/60">
-            End-to-end IT solutions designed to help your business innovate, scale, and stay ahead
-            of the competition.
+          <p className="mt-4 text-base leading-relaxed text-gc-navy/65 sm:text-lg">
+            End-to-end software development, AI automation, and cloud engineering designed to help
+            your business innovate, scale, and lead.
           </p>
         </div>
 
@@ -498,7 +538,7 @@ function HomeServicesSection() {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-12 text-center">
           <Link to="/services" className={BTN_PRIMARY}>
             View all services
             <svg viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor" aria-hidden="true">

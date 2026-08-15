@@ -1071,20 +1071,18 @@
   overflow: hidden;
   border-radius: 1rem;
   border: 1px solid var(--color-brand-100);
-  background: color-mix(in srgb, white 88%, var(--color-brand-50));
-  padding: 2rem;
+  background: #ffffff;
+  padding: 0;
   transition:
     transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
     border-color 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.3s ease;
+    box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   border-color: var(--color-brand-200);
-  background: #ffffff;
-  box-shadow: 0 12px 32px color-mix(in srgb, var(--color-gc-blue) 12%, transparent);
+  box-shadow: 0 16px 36px color-mix(in srgb, var(--color-gc-blue) 14%, transparent);
 }
 
 .service-card-bg {
