@@ -17,7 +17,7 @@ export default function SEO({ title, description, path, image = DEFAULT_OG_IMAGE
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="GrowwCode" />
+      <meta property="og:site_name" content="GlobalItSync" />
       <meta property="og:locale" content="en_US" />
 
       <meta name="twitter:card" content="summary_large_image" />

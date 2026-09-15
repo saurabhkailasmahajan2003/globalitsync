@@ -2,14 +2,14 @@ import { useScrollReveal } from '../hooks/useScrollReveal.js'
 
 const REASONS = [
   {
-    question: 'Why should I choose GrowwCode over other development teams?',
+    question: 'Why should I choose GlobalItSync over other development teams?',
     answer:
       'We combine hands-on engineering with real business understanding—not just ticket closing. Every project gets senior oversight, clean architecture, and a team that treats your goals as their own.',
   },
   {
     question: 'Do you have an experienced in-house team?',
     answer:
-      'Yes. GrowwCode is built around a dedicated in-house team of developers, designers, and AI engineers. You work directly with the people building your product, not a revolving door of freelancers.',
+      'Yes. GlobalItSync is built around a dedicated in-house team of developers, designers, and AI engineers. You work directly with the people building your product, not a revolving door of freelancers.',
   },
   {
     question: 'How do you keep projects on track and on time?',
@@ -42,10 +42,10 @@ export default function WhyChoose() {
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div ref={headerRef} className={`reveal ${headerVisible ? 'is-visible' : ''}`}>
           <p className="text-sm font-semibold uppercase tracking-widest text-gc-blue">
-            Why GrowwCode
+            Why GlobalItSync
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-gc-navy sm:text-4xl">
-            Why Choose GrowwCode
+            Why Choose GlobalItSync
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-gc-navy/60">
             Straight answers to what clients ask before they partner with us.

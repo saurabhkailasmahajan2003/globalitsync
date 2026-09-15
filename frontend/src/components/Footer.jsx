@@ -22,7 +22,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           <Link to="/" className="inline-flex shrink-0 items-center">
-            <img src={LOGO_URL} alt="GrowwCode" className="h-5 w-auto sm:h-6" />
+            <img src={LOGO_URL} alt="GlobalItSync" className="h-5 w-auto sm:h-6" />
           </Link>
 
           <div className="flex gap-3">
@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-8 text-center text-sm text-gc-navy/50">
-          &copy; {new Date().getFullYear()} GrowwCode. All rights reserved.
+          &copy; {new Date().getFullYear()} GlobalItSync. All rights reserved.
         </p>
       </div>
     </footer>

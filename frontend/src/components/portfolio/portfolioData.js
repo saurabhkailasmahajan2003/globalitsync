@@ -80,7 +80,7 @@ const appdevProjects = [
     tags: ['Mobile App', 'Food Packaging', 'E-Commerce'],
     playStore: {
       summary:
-        'GrowwCode developed, deployed, and hosted RestroBazaar on the Google Play Store.',
+        'GlobalItSync developed, deployed, and hosted RestroBazaar on the Google Play Store.',
       features: [
         'Published and live on Google Play Store',
         'End-to-end mobile development and Play Store listing setup',
@@ -140,7 +140,7 @@ export function getHeroWorkCategories() {
         title: category.displayLabel,
         tag: category.label,
         src: category.thumbnail ?? featured?.src,
-        alt: featured?.alt ?? `${category.displayLabel} — GrowwCode portfolio`,
+        alt: featured?.alt ?? `${category.displayLabel} — GlobalItSync portfolio`,
       }
     })
     .filter(Boolean)

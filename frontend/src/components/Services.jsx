@@ -243,7 +243,7 @@ function ServicesHero() {
           <div className="inline-flex items-center gap-2 rounded-full border border-gc-blue/20 bg-white px-3 py-1.5 shadow-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-gc-blue shadow-[0_0_8px_rgba(0,127,252,0.5)]" />
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gc-navy">
-              GrowwCode Services
+              GlobalItSync Services
             </span>
           </div>
 
@@ -432,7 +432,7 @@ function ExploreLinks() {
   return (
     <section className="border-t border-slate-200/70 bg-[#f7f9fc] py-12 lg:py-14">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <h2 className="text-xl font-bold text-gc-navy">Explore GrowwCode</h2>
+        <h2 className="text-xl font-bold text-gc-navy">Explore GlobalItSync</h2>
         <p className="mt-2 text-sm text-gc-navy/60">
           Jump to our core pages and specialized service offerings.
         </p>

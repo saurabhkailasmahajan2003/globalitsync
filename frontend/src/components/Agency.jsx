@@ -36,7 +36,7 @@ function TeamPhoto({ visible }) {
       />
       <img
         src={WHO_WE_ARE_IMAGE}
-        alt="GrowwCode team collaborating in the office"
+        alt="GlobalItSync team collaborating in the office"
         className="relative z-10 h-auto w-full max-w-md rounded-2xl border border-gc-blue/20 object-cover shadow-[0_24px_48px_rgba(1,44,100,0.12)] ring-1 ring-gc-navy/10 transition-all duration-700 group-hover:-translate-y-1 group-hover:scale-[1.02] group-hover:border-gc-blue/35 group-hover:shadow-[0_28px_56px_rgba(0,127,252,0.18)] group-hover:ring-gc-blue/25"
         loading="lazy"
       />
@@ -62,7 +62,7 @@ function TeamQuote({ visible }) {
       </blockquote>
       <figcaption className="mt-5 flex items-center gap-3 text-sm font-semibold text-gc-blue">
         <span className="h-px w-8 bg-gc-blue/30" />
-        GrowwCode Team
+        GlobalItSync Team
       </figcaption>
     </figure>
   )
@@ -88,13 +88,13 @@ export default function Agency() {
         className={`relative mx-auto max-w-6xl px-6 lg:px-8 reveal ${heroVisible ? 'is-visible' : ''}`}
       >
         <p className="text-sm font-semibold uppercase tracking-widest text-gc-blue">
-          About GrowwCode
+          About GlobalItSync
         </p>
         <h2 className="mt-3 max-w-3xl text-3xl font-bold tracking-tight text-gc-navy sm:text-4xl lg:text-5xl">
           Built On <span className="text-gc-blue">Experience</span>
         </h2>
         <p className="mt-5 w-full text-lg leading-relaxed text-gc-navy/70">
-          With years of hands-on experience and a strong in-house team, GrowwCode delivers
+          With years of hands-on experience and a strong in-house team, GlobalItSync delivers
           reliable digital solutions built around real-world business challenges. Our approach
           focuses on practical execution, close collaboration, and scalable system design,
           enabling clients to launch faster, improve efficiency, and grow with confidence.

@@ -267,7 +267,7 @@ function ContactSidebar({ isPage }) {
 
       {isPage ? (
         <div className="rounded-2xl border border-gc-blue/15 bg-gc-navy p-5 sm:p-6">
-          <p className="text-sm font-semibold text-white">Why teams choose GrowwCode</p>
+          <p className="text-sm font-semibold text-white">Why teams choose GlobalItSync</p>
           <ul className="mt-4 space-y-3">
             {TRUST_POINTS.map((point) => (
               <li key={point} className="flex items-start gap-2.5 text-sm text-white/80">
@@ -324,7 +324,7 @@ function ContactHero() {
           <div className="inline-flex items-center gap-2 rounded-full border border-gc-blue/20 bg-white px-3 py-1.5 shadow-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-gc-blue shadow-[0_0_8px_rgba(0,127,252,0.5)]" />
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gc-navy">
-              Contact GrowwCode
+              Contact GlobalItSync
             </span>
           </div>
 

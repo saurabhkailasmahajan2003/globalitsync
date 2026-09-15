@@ -126,7 +126,7 @@ function IndustryVisual({ industry, index, visible, imageFirst }) {
 
         <img
           src={industry.image}
-          alt={`${industry.title} solutions by GrowwCode`}
+          alt={`${industry.title} solutions by GlobalItSync`}
           className="relative z-10 mx-auto h-auto w-full max-w-[420px] object-contain drop-shadow-[0_24px_48px_rgba(0,127,252,0.18)] transition-transform duration-700 ease-out group-hover:scale-[1.04] group-hover:-translate-y-1"
           loading="lazy"
         />

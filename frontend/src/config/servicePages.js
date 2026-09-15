@@ -16,7 +16,7 @@ const SHARED_FAQS = [
   {
     question: 'How much does custom software development cost?',
     answer:
-      'Project costs depend on scope, complexity, integrations, and timeline. A focused MVP may start from a smaller budget, while enterprise platforms with multiple modules require a larger investment. GrowwCode provides transparent estimates after a discovery call, breaking down design, development, testing, and deployment so you understand exactly what you are paying for.',
+      'Project costs depend on scope, complexity, integrations, and timeline. A focused MVP may start from a smaller budget, while enterprise platforms with multiple modules require a larger investment. GlobalItSync provides transparent estimates after a discovery call, breaking down design, development, testing, and deployment so you understand exactly what you are paying for.',
   },
   {
     question: 'How long does development take?',
@@ -26,7 +26,7 @@ const SHARED_FAQS = [
   {
     question: 'Do you provide AWS deployment?',
     answer:
-      'Yes. GrowwCode designs, builds, and deploys applications on AWS using services such as EC2, ECS, Lambda, S3, RDS, and CloudFront. We configure CI/CD pipelines, monitoring, and security best practices so your application is production-ready, scalable, and cost-efficient from day one.',
+      'Yes. GlobalItSync designs, builds, and deploys applications on AWS using services such as EC2, ECS, Lambda, S3, RDS, and CloudFront. We configure CI/CD pipelines, monitoring, and security best practices so your application is production-ready, scalable, and cost-efficient from day one.',
   },
   {
     question: 'Do you offer post-launch support?',
@@ -41,13 +41,13 @@ export const CUSTOM_SOFTWARE_PAGE = {
   badge: 'Custom Software Development Services',
   h1: 'Custom Software Development Services Built for Your Business',
   heroSubtitle:
-    'GrowwCode delivers tailor-made software solutions that automate workflows, eliminate manual bottlenecks, and scale with your growth. From internal tools to customer-facing platforms, we engineer software around your exact requirements—not the other way around.',
+    'GlobalItSync delivers tailor-made software solutions that automate workflows, eliminate manual bottlenecks, and scale with your growth. From internal tools to customer-facing platforms, we engineer software around your exact requirements—not the other way around.',
   overview: {
     title: 'Why businesses choose custom software over off-the-shelf tools',
     paragraphs: [
-      'Off-the-shelf software forces your team to adapt to someone else\'s workflow. Custom software development services flip that model: your processes, compliance needs, and competitive advantages become the foundation of the product. At GrowwCode, we partner with startups, SMBs, and enterprises to design and build applications that fit like a glove—whether you need a CRM replacement, an operations dashboard, or a full SaaS platform.',
+      'Off-the-shelf software forces your team to adapt to someone else\'s workflow. Custom software development services flip that model: your processes, compliance needs, and competitive advantages become the foundation of the product. At GlobalItSync, we partner with startups, SMBs, and enterprises to design and build applications that fit like a glove—whether you need a CRM replacement, an operations dashboard, or a full SaaS platform.',
       'Our approach starts with discovery. We map your current workflows, identify pain points, and define measurable outcomes before writing a single line of code. That clarity reduces rework, keeps budgets predictable, and ensures the final product solves real business problems. We have delivered custom software across e-commerce, healthcare, logistics, fintech, and education—each project shaped by industry-specific requirements.',
-      'Security, scalability, and maintainability are built in from the start. We use modern architectures, clean code practices, and thorough documentation so your internal team or future partners can extend the system confidently. Whether you need a greenfield build or modernization of a legacy application, GrowwCode provides end-to-end custom software development services from concept to launch and beyond.',
+      'Security, scalability, and maintainability are built in from the start. We use modern architectures, clean code practices, and thorough documentation so your internal team or future partners can extend the system confidently. Whether you need a greenfield build or modernization of a legacy application, GlobalItSync provides end-to-end custom software development services from concept to launch and beyond.',
     ],
   },
   offerings: {
@@ -82,7 +82,7 @@ export const CUSTOM_SOFTWARE_PAGE = {
       {
         title: 'Dedicated development teams',
         description:
-          'Scale your capacity with a dedicated GrowwCode squad that works as an extension of your in-house team, aligned to your roadmap and sprint cadence.',
+          'Scale your capacity with a dedicated GlobalItSync squad that works as an extension of your in-house team, aligned to your roadmap and sprint cadence.',
       },
     ],
   },
@@ -105,7 +105,7 @@ export const CUSTOM_SOFTWARE_PAGE = {
     ],
   },
   benefits: {
-    title: 'Benefits of partnering with GrowwCode',
+    title: 'Benefits of partnering with GlobalItSync',
     subtitle: 'More than code—we deliver business outcomes you can measure.',
     items: [
       {
@@ -146,13 +146,13 @@ export const CUSTOM_SOFTWARE_PAGE = {
       paragraphs: [
         'We follow a structured yet flexible process designed to minimize risk and maximize clarity. Discovery and requirements gathering come first: we interview stakeholders, document user stories, and define success metrics. Next, our designers create wireframes and interactive prototypes so you can validate the user experience before development begins.',
         'Development happens in two-week sprints with demos at the end of each cycle. You see working software regularly, provide feedback, and reprioritize the backlog as needed. Quality assurance runs in parallel—automated tests, manual QA, and performance checks ensure stability before every release. Deployment is handled on AWS or your preferred cloud with monitoring and rollback procedures in place.',
-        'After launch, we transition to a support and enhancement phase. Whether you need bug fixes, new modules, or infrastructure optimization, GrowwCode remains your technical partner. This continuity is one reason clients choose our custom software development services over agencies that disappear after delivery.',
+        'After launch, we transition to a support and enhancement phase. Whether you need bug fixes, new modules, or infrastructure optimization, GlobalItSync remains your technical partner. This continuity is one reason clients choose our custom software development services over agencies that disappear after delivery.',
       ],
     },
     {
       title: 'Industries we build custom software for',
       paragraphs: [
-        'GrowwCode has delivered custom platforms for e-commerce brands needing inventory and order management beyond standard storefront tools. Healthcare clients rely on us for patient portals and telemedicine workflows with strict data handling requirements. Logistics companies use our route optimization and fleet tracking systems to cut costs and improve delivery times.',
+        'GlobalItSync has delivered custom platforms for e-commerce brands needing inventory and order management beyond standard storefront tools. Healthcare clients rely on us for patient portals and telemedicine workflows with strict data handling requirements. Logistics companies use our route optimization and fleet tracking systems to cut costs and improve delivery times.',
         'Fintech startups trust us to build secure payment flows, dashboards, and compliance-ready backends. Education providers use our LMS and student analytics tools to improve engagement and outcomes. No matter your industry, we invest time understanding your domain so the software reflects real operational needs—not generic templates.',
       ],
     },
@@ -162,7 +162,7 @@ export const CUSTOM_SOFTWARE_PAGE = {
   cta: {
     title: 'Ready to build software that fits your business?',
     description:
-      'Tell us about your project and get a free consultation. GrowwCode will help you scope, plan, and deliver custom software development services that drive measurable results.',
+      'Tell us about your project and get a free consultation. GlobalItSync will help you scope, plan, and deliver custom software development services that drive measurable results.',
   },
 }
 
@@ -172,13 +172,13 @@ export const WEB_DEVELOPMENT_PAGE = {
   badge: 'Web Development Company',
   h1: 'Web Development Company for High-Performance Digital Experiences',
   heroSubtitle:
-    'As a full-service web development company, GrowwCode builds fast, secure, and SEO-friendly websites and web applications that convert visitors into customers. From corporate sites to complex web platforms, we deliver results that rank, load quickly, and scale.',
+    'As a full-service web development company, GlobalItSync builds fast, secure, and SEO-friendly websites and web applications that convert visitors into customers. From corporate sites to complex web platforms, we deliver results that rank, load quickly, and scale.',
   overview: {
-    title: 'What makes GrowwCode a trusted web development company',
+    title: 'What makes GlobalItSync a trusted web development company',
     paragraphs: [
-      'Your website is often the first impression customers have of your brand. A slow, outdated, or confusing site costs you leads every day. GrowwCode is a web development company focused on building digital experiences that perform—technically, visually, and commercially. We combine modern front-end engineering with solid back-end architecture to create websites and web apps that load in seconds, rank in search engines, and guide users toward action.',
+      'Your website is often the first impression customers have of your brand. A slow, outdated, or confusing site costs you leads every day. GlobalItSync is a web development company focused on building digital experiences that perform—technically, visually, and commercially. We combine modern front-end engineering with solid back-end architecture to create websites and web apps that load in seconds, rank in search engines, and guide users toward action.',
       'Whether you need a marketing site, an e-commerce storefront, a customer portal, or a data-driven dashboard, our team brings the same rigor to every project. We use React, Next.js, Node.js, and proven cloud infrastructure to deliver solutions that are maintainable and future-proof. Our designers and developers work together so the final product looks polished and works flawlessly across devices.',
-      'As your web development company, we do not just hand over code and walk away. We optimize for Core Web Vitals, implement analytics, configure hosting on AWS, and provide ongoing support. Clients across India and internationally choose GrowwCode because we treat every website as a business asset—not a one-time brochure.',
+      'As your web development company, we do not just hand over code and walk away. We optimize for Core Web Vitals, implement analytics, configure hosting on AWS, and provide ongoing support. Clients across India and internationally choose GlobalItSync because we treat every website as a business asset—not a one-time brochure.',
     ],
   },
   offerings: {
@@ -236,7 +236,7 @@ export const WEB_DEVELOPMENT_PAGE = {
     ],
   },
   benefits: {
-    title: 'Why hire GrowwCode as your web development company',
+    title: 'Why hire GlobalItSync as your web development company',
     subtitle: 'Technical excellence paired with business-focused delivery.',
     items: [
       {
@@ -276,7 +276,7 @@ export const WEB_DEVELOPMENT_PAGE = {
       title: 'Our web development process',
       paragraphs: [
         'Every project begins with a discovery session where we understand your goals, audience, competitors, and technical requirements. We then create sitemaps, wireframes, and visual designs for your approval. Once the design is locked, our developers build the front end and back end in parallel, integrating CMS, APIs, and third-party services as needed.',
-        'Before launch, we run cross-browser testing, accessibility checks, performance audits, and security reviews. We configure hosting, SSL certificates, CDN, and monitoring tools. After go-live, we track analytics and iterate based on real user behavior. This disciplined process is why businesses trust GrowwCode as their long-term web development company.',
+        'Before launch, we run cross-browser testing, accessibility checks, performance audits, and security reviews. We configure hosting, SSL certificates, CDN, and monitoring tools. After go-live, we track analytics and iterate based on real user behavior. This disciplined process is why businesses trust GlobalItSync as their long-term web development company.',
       ],
     },
     {
@@ -292,7 +292,7 @@ export const WEB_DEVELOPMENT_PAGE = {
   cta: {
     title: 'Let\'s build a website that works as hard as you do',
     description:
-      'Partner with a web development company that understands both code and business. Contact GrowwCode today for a free project consultation.',
+      'Partner with a web development company that understands both code and business. Contact GlobalItSync today for a free project consultation.',
   },
 }
 
@@ -302,13 +302,13 @@ export const MOBILE_APP_PAGE = {
   badge: 'Mobile App Development Company',
   h1: 'Mobile App Development Company for iOS & Android',
   heroSubtitle:
-    'GrowwCode is a mobile app development company that builds native and cross-platform applications users love. From consumer apps to enterprise mobility solutions, we deliver polished experiences with reliable backends and scalable infrastructure.',
+    'GlobalItSync is a mobile app development company that builds native and cross-platform applications users love. From consumer apps to enterprise mobility solutions, we deliver polished experiences with reliable backends and scalable infrastructure.',
   overview: {
     title: 'Expert mobile app development for modern businesses',
     paragraphs: [
-      'Mobile apps have become essential for customer engagement, field operations, and revenue growth. As a mobile app development company, GrowwCode helps you reach users on iOS and Android with applications that are intuitive, performant, and aligned with your brand. We build everything from on-demand service apps and e-commerce mobile stores to internal workforce tools and IoT-connected platforms.',
+      'Mobile apps have become essential for customer engagement, field operations, and revenue growth. As a mobile app development company, GlobalItSync helps you reach users on iOS and Android with applications that are intuitive, performant, and aligned with your brand. We build everything from on-demand service apps and e-commerce mobile stores to internal workforce tools and IoT-connected platforms.',
       'Our team evaluates your requirements and recommends the right approach—React Native or Flutter for cross-platform efficiency, or native Swift and Kotlin when platform-specific performance is critical. Every app we build connects to a secure backend, handles offline scenarios gracefully, and follows app store guidelines for smooth approval.',
-      'Choosing the right mobile app development company matters. Poor architecture leads to crashes, slow updates, and expensive rewrites. GrowwCode invests in clean code, automated testing, and CI/CD pipelines so your app stays maintainable as features grow. We have shipped apps for startups launching their first product and enterprises rolling out mobility to thousands of employees.',
+      'Choosing the right mobile app development company matters. Poor architecture leads to crashes, slow updates, and expensive rewrites. GlobalItSync invests in clean code, automated testing, and CI/CD pipelines so your app stays maintainable as features grow. We have shipped apps for startups launching their first product and enterprises rolling out mobility to thousands of employees.',
     ],
   },
   offerings: {
@@ -413,7 +413,7 @@ export const MOBILE_APP_PAGE = {
       title: 'Mobile apps for every industry',
       paragraphs: [
         'Retail and e-commerce brands use our apps for mobile shopping, loyalty programs, and push-driven promotions. Healthcare organizations deploy patient apps for appointments, telemedicine, and health tracking. Logistics companies equip drivers with route apps and real-time status updates. Fintech apps handle secure transactions and portfolio management.',
-        'Whatever your sector, GrowwCode brings domain awareness and technical depth as your mobile app development company. We also integrate with wearables, Bluetooth devices, and GPS for specialized use cases. View our portfolio and contact us to discuss your mobile product vision.',
+        'Whatever your sector, GlobalItSync brings domain awareness and technical depth as your mobile app development company. We also integrate with wearables, Bluetooth devices, and GPS for specialized use cases. View our portfolio and contact us to discuss your mobile product vision.',
       ],
     },
   ],
@@ -422,7 +422,7 @@ export const MOBILE_APP_PAGE = {
   cta: {
     title: 'Turn your app idea into a product users download',
     description:
-      'Work with a mobile app development company that delivers on time and on budget. Get in touch with GrowwCode for a free consultation.',
+      'Work with a mobile app development company that delivers on time and on budget. Get in touch with GlobalItSync for a free consultation.',
   },
 }
 
@@ -432,13 +432,13 @@ export const REACT_DEVELOPMENT_PAGE = {
   badge: 'React Development Company',
   h1: 'React Development Company for Scalable Web Applications',
   heroSubtitle:
-    'GrowwCode is a React development company specializing in high-performance front-end engineering, component-driven architecture, and modern JavaScript ecosystems. We build React applications that are fast, maintainable, and ready to scale.',
+    'GlobalItSync is a React development company specializing in high-performance front-end engineering, component-driven architecture, and modern JavaScript ecosystems. We build React applications that are fast, maintainable, and ready to scale.',
   overview: {
     title: 'Why businesses hire a dedicated React development company',
     paragraphs: [
-      'React powers some of the world\'s most demanding web applications—from Facebook and Netflix to thousands of SaaS products and enterprise dashboards. As a React development company, GrowwCode helps you leverage this ecosystem to build interfaces that are responsive, interactive, and easy to extend. Our engineers specialize in React, Next.js, TypeScript, and state management patterns that keep large codebases manageable.',
+      'React powers some of the world\'s most demanding web applications—from Facebook and Netflix to thousands of SaaS products and enterprise dashboards. As a React development company, GlobalItSync helps you leverage this ecosystem to build interfaces that are responsive, interactive, and easy to extend. Our engineers specialize in React, Next.js, TypeScript, and state management patterns that keep large codebases manageable.',
       'Hiring a generalist agency often means React best practices get overlooked. Our team lives and breathes the React ecosystem. We implement design systems, reusable component libraries, server-side rendering with Next.js, and performance optimizations like code splitting and lazy loading. The result is applications that feel instant and cost less to maintain over time.',
-      'Whether you need a greenfield React application, a migration from legacy jQuery or Angular, or augmentation of your existing front-end team, GrowwCode delivers. We integrate with any back end—Node.js, Python, .NET, or headless CMS—and follow testing practices that catch regressions before they reach production. Partner with a React development company that understands both the framework and your business goals.',
+      'Whether you need a greenfield React application, a migration from legacy jQuery or Angular, or augmentation of your existing front-end team, GlobalItSync delivers. We integrate with any back end—Node.js, Python, .NET, or headless CMS—and follow testing practices that catch regressions before they reach production. Partner with a React development company that understands both the framework and your business goals.',
     ],
   },
   offerings: {
@@ -496,7 +496,7 @@ export const REACT_DEVELOPMENT_PAGE = {
     ],
   },
   benefits: {
-    title: 'Advantages of choosing GrowwCode as your React development company',
+    title: 'Advantages of choosing GlobalItSync as your React development company',
     subtitle: 'Deep React expertise that translates into better products.',
     items: [
       {
@@ -543,7 +543,7 @@ export const REACT_DEVELOPMENT_PAGE = {
       title: 'React for startups and enterprises alike',
       paragraphs: [
         'Startups benefit from our ability to ship MVPs rapidly using proven React patterns and open-source libraries. Enterprises value our experience with large-scale applications—micro-frontends, module federation, role-based UIs, and integration with legacy systems.',
-        'GrowwCode has built React dashboards for analytics platforms, e-commerce storefronts with dynamic product configurators, and internal tools replacing spreadsheet-driven workflows. Our React developers stay current with the latest releases, hooks patterns, and server component capabilities in Next.js so your application benefits from framework improvements as they ship.',
+        'GlobalItSync has built React dashboards for analytics platforms, e-commerce storefronts with dynamic product configurators, and internal tools replacing spreadsheet-driven workflows. Our React developers stay current with the latest releases, hooks patterns, and server component capabilities in Next.js so your application benefits from framework improvements as they ship.',
         'If you are evaluating a React development company, review our portfolio and schedule a call to discuss your front-end roadmap. We will help you choose the right architecture, estimate timelines accurately, and assemble a team that delivers production-quality React code from sprint one.',
       ],
     },
@@ -553,7 +553,7 @@ export const REACT_DEVELOPMENT_PAGE = {
   cta: {
     title: 'Need a React development company you can trust?',
     description:
-      'GrowwCode delivers React applications built for performance, maintainability, and growth. Contact us to discuss your project requirements.',
+      'GlobalItSync delivers React applications built for performance, maintainability, and growth. Contact us to discuss your project requirements.',
   },
 }
 
@@ -563,13 +563,13 @@ export const AWS_CLOUD_PAGE = {
   badge: 'AWS Cloud Services',
   h1: 'AWS Cloud Services for Secure, Scalable Infrastructure',
   heroSubtitle:
-    'GrowwCode provides end-to-end AWS cloud services—from architecture design and migration to DevOps, monitoring, and cost optimization. We help businesses run reliable, secure, and cost-efficient workloads on Amazon Web Services.',
+    'GlobalItSync provides end-to-end AWS cloud services—from architecture design and migration to DevOps, monitoring, and cost optimization. We help businesses run reliable, secure, and cost-efficient workloads on Amazon Web Services.',
   overview: {
     title: 'Professional AWS cloud services for growing businesses',
     paragraphs: [
-      'Moving to the cloud is not just about hosting—it is about building infrastructure that scales on demand, recovers from failures automatically, and keeps costs under control. GrowwCode\'s AWS cloud services cover the full lifecycle: assessing your current setup, designing a target architecture, migrating workloads, and managing production environments with 24/7 monitoring.',
+      'Moving to the cloud is not just about hosting—it is about building infrastructure that scales on demand, recovers from failures automatically, and keeps costs under control. GlobalItSync\'s AWS cloud services cover the full lifecycle: assessing your current setup, designing a target architecture, migrating workloads, and managing production environments with 24/7 monitoring.',
       'Our cloud engineers are experienced with core AWS services including EC2, ECS, EKS, Lambda, S3, RDS, DynamoDB, CloudFront, Route 53, IAM, and VPC networking. We implement infrastructure as code with Terraform and CloudFormation, set up CI/CD pipelines, and configure auto-scaling policies that match your traffic patterns. Security is never an afterthought—encryption, least-privilege IAM, WAF rules, and compliance best practices are standard.',
-      'Whether you are launching a new product on AWS, migrating from on-premises servers, or optimizing an existing cloud bill, GrowwCode delivers AWS cloud services tailored to your technical and business requirements. We work alongside your development team or handle infrastructure independently so you can focus on building features.',
+      'Whether you are launching a new product on AWS, migrating from on-premises servers, or optimizing an existing cloud bill, GlobalItSync delivers AWS cloud services tailored to your technical and business requirements. We work alongside your development team or handle infrastructure independently so you can focus on building features.',
     ],
   },
   offerings: {
@@ -627,7 +627,7 @@ export const AWS_CLOUD_PAGE = {
     ],
   },
   benefits: {
-    title: 'Benefits of GrowwCode AWS cloud services',
+    title: 'Benefits of GlobalItSync AWS cloud services',
     subtitle: 'Infrastructure that supports your product—not holds it back.',
     items: [
       {
@@ -674,7 +674,7 @@ export const AWS_CLOUD_PAGE = {
       title: 'AWS cloud services for every use case',
       paragraphs: [
         'SaaS companies rely on our AWS cloud services for multi-tenant architectures with isolated customer data. E-commerce platforms use CloudFront CDN and auto-scaling to handle seasonal traffic. Data-intensive applications leverage S3, Glue, and Athena for storage and analytics. Mobile app backends run on serverless stacks that scale to zero during quiet periods.',
-        'GrowwCode also provides AWS deployment as part of our software development projects—your web app, mobile backend, or custom platform goes live on a production-ready AWS environment from day one. Contact us to discuss your cloud strategy, get a cost estimate, or schedule a Well-Architected review.',
+        'GlobalItSync also provides AWS deployment as part of our software development projects—your web app, mobile backend, or custom platform goes live on a production-ready AWS environment from day one. Contact us to discuss your cloud strategy, get a cost estimate, or schedule a Well-Architected review.',
       ],
     },
   ],
@@ -683,7 +683,7 @@ export const AWS_CLOUD_PAGE = {
   cta: {
     title: 'Ready to move to AWS with confidence?',
     description:
-      'GrowwCode AWS cloud services help you build, migrate, and manage infrastructure that scales. Get a free cloud consultation today.',
+      'GlobalItSync AWS cloud services help you build, migrate, and manage infrastructure that scales. Get a free cloud consultation today.',
   },
 }
 
@@ -693,11 +693,11 @@ export const AI_ML_PAGE = {
   badge: 'AI / ML Projects',
   h1: 'AI & Machine Learning Solutions for Real Business Data',
   heroSubtitle:
-    'GrowwCode builds custom ML models, data pipelines, and predictive analytics that turn your data into actionable insights—not just dashboards.',
+    'GlobalItSync builds custom ML models, data pipelines, and predictive analytics that turn your data into actionable insights—not just dashboards.',
   overview: {
     title: 'Practical AI / ML engineering for growing teams',
     paragraphs: [
-      'Most businesses sit on valuable data but lack the models and pipelines to use it. GrowwCode designs machine learning systems around your goals—forecasting demand, detecting fraud, personalizing experiences, or automating document processing. We focus on production-ready delivery, not experiments that never ship.',
+      'Most businesses sit on valuable data but lack the models and pipelines to use it. GlobalItSync designs machine learning systems around your goals—forecasting demand, detecting fraud, personalizing experiences, or automating document processing. We focus on production-ready delivery, not experiments that never ship.',
       'From data preparation to model training, deployment, and monitoring, our team handles the full lifecycle. We work with structured and unstructured data, integrate predictions into your existing apps, and document everything so your team can maintain and extend the system.',
     ],
   },
@@ -733,7 +733,7 @@ export const AI_ML_PAGE = {
     items: ['Python', 'TensorFlow', 'PyTorch', 'scikit-learn', 'Pandas', 'AWS SageMaker', 'MLflow', 'FastAPI'],
   },
   benefits: {
-    title: 'Why GrowwCode for AI / ML',
+    title: 'Why GlobalItSync for AI / ML',
     subtitle: 'Engineering discipline applied to intelligent systems.',
     items: [
       {
@@ -771,7 +771,7 @@ export const AI_ML_PAGE = {
   cta: {
     title: 'Ready to put your data to work?',
     description:
-      'Tell us about your AI / ML goals. GrowwCode will help you scope, build, and deploy models that deliver measurable business value.',
+      'Tell us about your AI / ML goals. GlobalItSync will help you scope, build, and deploy models that deliver measurable business value.',
   },
 }
 
@@ -781,11 +781,11 @@ export const AI_AGENTS_PAGE = {
   badge: 'AI Agents',
   h1: 'Intelligent AI Agents for Support & Workflow Automation',
   heroSubtitle:
-    'GrowwCode builds autonomous AI agents that handle customer queries, internal workflows, and decision support—integrated with the tools your team already uses.',
+    'GlobalItSync builds autonomous AI agents that handle customer queries, internal workflows, and decision support—integrated with the tools your team already uses.',
   overview: {
     title: 'Agents that work inside your operations',
     paragraphs: [
-      'AI agents go beyond simple chatbots. They can read documents, call APIs, update CRMs, route tickets, and complete multi-step tasks with guardrails. GrowwCode designs agents around your processes—support, sales ops, HR onboarding, or field workflows—so automation feels natural, not bolted on.',
+      'AI agents go beyond simple chatbots. They can read documents, call APIs, update CRMs, route tickets, and complete multi-step tasks with guardrails. GlobalItSync designs agents around your processes—support, sales ops, HR onboarding, or field workflows—so automation feels natural, not bolted on.',
       'We combine large language models with structured tools, retrieval systems, and human handoff flows. Every agent is built with logging, access controls, and fallback paths so your team stays in control while routine work gets handled faster.',
     ],
   },
@@ -821,7 +821,7 @@ export const AI_AGENTS_PAGE = {
     items: ['OpenAI', 'LangChain', 'Python', 'Node.js', 'Vector DBs', 'REST APIs', 'Webhooks', 'AWS'],
   },
   benefits: {
-    title: 'Why build agents with GrowwCode',
+    title: 'Why build agents with GlobalItSync',
     subtitle: 'Reliable automation with engineering oversight.',
     items: [
       {
@@ -859,7 +859,7 @@ export const AI_AGENTS_PAGE = {
   cta: {
     title: 'Want agents that actually do the work?',
     description:
-      'Share your workflow challenges. GrowwCode will design AI agents that save time, reduce errors, and scale with your team.',
+      'Share your workflow challenges. GlobalItSync will design AI agents that save time, reduce errors, and scale with your team.',
   },
 }
 
@@ -869,11 +869,11 @@ export const IT_CONSULTING_PAGE = {
   badge: 'AI Automation',
   h1: 'AI Automation for Businesses That Want to Scale Smarter',
   heroSubtitle:
-    'GrowwCode helps businesses automate repetitive workflows, connect their tools with intelligent integrations, and deploy AI-powered systems that save time and reduce operational overhead.',
+    'GlobalItSync helps businesses automate repetitive workflows, connect their tools with intelligent integrations, and deploy AI-powered systems that save time and reduce operational overhead.',
   overview: {
     title: 'Automation built around how your business actually works',
     paragraphs: [
-      'Manual processes slow teams down—data entry, handoffs between tools, follow-ups, reporting, and routine customer requests all add up. GrowwCode designs AI automation that fits your operations: we map your workflows, identify high-impact opportunities, and build solutions that work with the software you already use.',
+      'Manual processes slow teams down—data entry, handoffs between tools, follow-ups, reporting, and routine customer requests all add up. GlobalItSync designs AI automation that fits your operations: we map your workflows, identify high-impact opportunities, and build solutions that work with the software you already use.',
       'From automated lead routing and invoice processing to intelligent document handling and internal task orchestration, we deliver practical automation—not generic bots. Every solution includes monitoring, error handling, and clear handoff paths so your team stays in control.',
     ],
   },
@@ -909,7 +909,7 @@ export const IT_CONSULTING_PAGE = {
     items: ['OpenAI', 'Python', 'Node.js', 'Zapier/Make', 'REST APIs', 'Webhooks', 'CRM systems', 'AWS'],
   },
   benefits: {
-    title: 'Why businesses choose GrowwCode for automation',
+    title: 'Why businesses choose GlobalItSync for automation',
     subtitle: 'Real efficiency gains—not experiments that never ship.',
     items: [
       {
@@ -947,6 +947,6 @@ export const IT_CONSULTING_PAGE = {
   cta: {
     title: 'Ready to automate the work holding your team back?',
     description:
-      'Tell us about your workflows. GrowwCode will identify automation opportunities and build solutions that save time from day one.',
+      'Tell us about your workflows. GlobalItSync will identify automation opportunities and build solutions that save time from day one.',
   },
 }

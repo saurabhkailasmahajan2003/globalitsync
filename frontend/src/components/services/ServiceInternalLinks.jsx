@@ -5,7 +5,7 @@ export default function ServiceInternalLinks({ currentPath }) {
   return (
     <section className="service-page-links border-t border-brand-100 bg-gc-light/30">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <h2 className="text-xl font-bold text-gc-navy">Explore GrowwCode</h2>
+        <h2 className="text-xl font-bold text-gc-navy">Explore GlobalItSync</h2>
         <p className="mt-2 text-sm text-gc-navy/60">
           Navigate between our core pages and specialized service offerings.
         </p>

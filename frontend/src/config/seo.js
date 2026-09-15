@@ -1,13 +1,13 @@
 import { LOGO_URL } from './brand.js'
 
-const SITE_URL = 'https://growwcode.com'
+const SITE_URL = 'https://globalitsync.com'
 
 const DEFAULT_OG_IMAGE = LOGO_URL
 
 export const DEFAULT_SEO = {
-  title: 'GrowwCode - Custom Software, Web & Mobile App Development',
+  title: 'GlobalItSync - Custom Software, Web & Mobile App Development',
   description:
-    'GrowwCode builds custom software, web applications, and mobile apps. Full-stack development, AI/ML solutions, and cloud services for startups and enterprises.',
+    'GlobalItSync builds custom software, web applications, and mobile apps. Full-stack development, AI/ML solutions, and cloud services for startups and enterprises.',
 }
 
 export const PAGE_SEO = {
@@ -18,75 +18,75 @@ export const PAGE_SEO = {
   },
   services: {
     path: '/services',
-    title: 'Software Development Services | GrowwCode',
+    title: 'Software Development Services | GlobalItSync',
     description:
-      'Explore GrowwCode software development services: web apps, mobile apps, AI/ML, cloud infrastructure, and dedicated engineering teams tailored to your business.',
+      'Explore GlobalItSync software development services: web apps, mobile apps, AI/ML, cloud infrastructure, and dedicated engineering teams tailored to your business.',
   },
   portfolio: {
     path: '/project-work',
-    title: 'Our Portfolio | GrowwCode',
+    title: 'Our Portfolio | GlobalItSync',
     description:
-      'View GrowwCode portfolio of web, mobile, and AI projects delivered for clients across e-commerce, healthcare, fintech, and more.',
+      'View GlobalItSync portfolio of web, mobile, and AI projects delivered for clients across e-commerce, healthcare, fintech, and more.',
   },
   industries: {
     path: '/industries',
-    title: 'Industries We Serve | GrowwCode',
+    title: 'Industries We Serve | GlobalItSync',
     description:
-      'GrowwCode serves e-commerce, healthcare, fintech, education, logistics, and more with custom software tailored to each industry.',
+      'GlobalItSync serves e-commerce, healthcare, fintech, education, logistics, and more with custom software tailored to each industry.',
   },
   contact: {
     path: '/contact',
-    title: 'Contact GrowwCode | Software Development Company',
+    title: 'Contact GlobalItSync | Software Development Company',
     description:
-      'Contact GrowwCode to discuss your software project. We build custom web apps, mobile apps, and AI solutions for businesses worldwide.',
+      'Contact GlobalItSync to discuss your software project. We build custom web apps, mobile apps, and AI solutions for businesses worldwide.',
   },
   customSoftwareDevelopment: {
     path: '/custom-software-development',
-    title: 'Custom Software Development Services | GrowwCode',
+    title: 'Custom Software Development Services | GlobalItSync',
     description:
-      'GrowwCode offers custom software development services for startups and enterprises. Tailored applications, SaaS platforms, automation, and legacy modernization.',
+      'GlobalItSync offers custom software development services for startups and enterprises. Tailored applications, SaaS platforms, automation, and legacy modernization.',
   },
   webDevelopmentServices: {
     path: '/web-development-services',
-    title: 'Web Development Company | GrowwCode',
+    title: 'Web Development Company | GlobalItSync',
     description:
-      'Hire GrowwCode, a trusted web development company. We build fast, SEO-friendly websites, e-commerce stores, and web applications on React and Node.js.',
+      'Hire GlobalItSync, a trusted web development company. We build fast, SEO-friendly websites, e-commerce stores, and web applications on React and Node.js.',
   },
   mobileAppDevelopment: {
     path: '/mobile-app-development',
-    title: 'Mobile App Development Company | GrowwCode',
+    title: 'Mobile App Development Company | GlobalItSync',
     description:
-      'GrowwCode is a mobile app development company building iOS, Android, and cross-platform apps with React Native, Flutter, and native technologies.',
+      'GlobalItSync is a mobile app development company building iOS, Android, and cross-platform apps with React Native, Flutter, and native technologies.',
   },
   reactDevelopmentCompany: {
     path: '/react-development-company',
-    title: 'React Development Company | GrowwCode',
+    title: 'React Development Company | GlobalItSync',
     description:
-      'GrowwCode is a React development company specializing in React, Next.js, and TypeScript. Scalable SPAs, SSR apps, and component libraries.',
+      'GlobalItSync is a React development company specializing in React, Next.js, and TypeScript. Scalable SPAs, SSR apps, and component libraries.',
   },
   awsCloudServices: {
     path: '/aws-cloud-services',
-    title: 'AWS Cloud Services | GrowwCode',
+    title: 'AWS Cloud Services | GlobalItSync',
     description:
-      'GrowwCode provides AWS cloud services including architecture, migration, DevOps, serverless, and managed infrastructure on Amazon Web Services.',
+      'GlobalItSync provides AWS cloud services including architecture, migration, DevOps, serverless, and managed infrastructure on Amazon Web Services.',
   },
   aiMlProjects: {
     path: '/ai-ml-projects',
-    title: 'AI / ML Projects | GrowwCode',
+    title: 'AI / ML Projects | GlobalItSync',
     description:
-      'GrowwCode builds custom machine learning models, data pipelines, predictive analytics, and MLOps solutions tailored to your business data.',
+      'GlobalItSync builds custom machine learning models, data pipelines, predictive analytics, and MLOps solutions tailored to your business data.',
   },
   aiAgents: {
     path: '/ai-agents',
-    title: 'AI Agents Development | GrowwCode',
+    title: 'AI Agents Development | GlobalItSync',
     description:
-      'GrowwCode develops intelligent AI agents for customer support, workflow automation, knowledge assistants, and decision-support copilots.',
+      'GlobalItSync develops intelligent AI agents for customer support, workflow automation, knowledge assistants, and decision-support copilots.',
   },
   itConsulting: {
     path: '/it-consulting',
-    title: 'AI Automation for Businesses | GrowwCode',
+    title: 'AI Automation for Businesses | GlobalItSync',
     description:
-      'GrowwCode delivers AI automation for businesses—workflow automation, intelligent integrations, and AI-powered tools that cut manual work and scale operations.',
+      'GlobalItSync delivers AI automation for businesses—workflow automation, intelligent integrations, and AI-powered tools that cut manual work and scale operations.',
   },
 }
 

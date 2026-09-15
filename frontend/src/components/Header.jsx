@@ -74,7 +74,7 @@ export default function Header() {
               className="inline-flex shrink-0 items-center"
               onClick={closeMenu}
             >
-              <img src={LOGO_URL} alt="GrowwCode" className="h-8 sm:h-10 w-auto" />
+              <img src={LOGO_URL} alt="GlobalItSync" className="h-8 sm:h-10 w-auto" />
             </Link>
 
             <nav

@@ -3,8 +3,8 @@ export const CONTACT_PHONES = ['9763684771']
 export const CONTACT_EMAIL = ''
 
 export const SOCIAL_LINKS = {
-  linkedin: 'https://www.linkedin.com/company/growwcode-com/',
-  instagram: 'https://www.instagram.com/growwcode.tech',
+  linkedin: 'https://www.linkedin.com/company/globalitsync-com/',
+  instagram: 'https://www.instagram.com/globalitsync.tech',
   facebook: 'https://www.facebook.com/share/1Bg4m8eWBA/',
   whatsapp: `https://wa.me/91${CONTACT_PHONES[0]}`,
 }
