@@ -101,7 +101,7 @@ function IndustryVisual({ industry, index, visible, imageFirst }) {
           aria-hidden="true"
           className="absolute right-8 top-6 h-20 w-20 opacity-40"
           style={{
-            backgroundImage: 'radial-gradient(circle, #007ffc 1.5px, transparent 1.5px)',
+            backgroundImage: 'radial-gradient(circle, #5925ad 1.5px, transparent 1.5px)',
             backgroundSize: '14px 14px',
           }}
         />

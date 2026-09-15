@@ -1,6 +1,6 @@
-export const CONTACT_PHONES = ['9405754107']
+export const CONTACT_PHONES = ['9763684771']
 
-export const CONTACT_EMAIL = 'growwcodeit@gmail.com'
+export const CONTACT_EMAIL = ''
 
 export const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/company/growwcode-com/',

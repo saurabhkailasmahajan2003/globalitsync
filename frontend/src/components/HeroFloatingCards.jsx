@@ -1,99 +1,72 @@
 import { Link } from 'react-router-dom'
-import { getHeroWorkCategories } from './portfolio/portfolioData.js'
 
-const APPDEV_FEATURES = [
-  { title: 'Cross-Platform', desc: 'iOS & Android from one codebase' },
-  { title: 'Secure Auth', desc: 'OTP login and user sessions' },
-  { title: 'Play Store Ready', desc: 'Publish and scale with confidence' },
-]
-
-const DEVOPS_ITEMS = [
-  { name: 'AWS EC2', role: 'Cloud hosting', status: 'Live' },
-  { name: 'Docker', role: 'Containers', status: 'Active' },
-  { name: 'CI/CD Pipeline', role: 'Auto deploy', status: '24/7' },
-]
-
-function AppDevVisual() {
-  return (
-    <div className="hero-ui-stack">
-      {APPDEV_FEATURES.map((item) => (
-        <div key={item.title} className="hero-ui-stack-item">
-          <p className="hero-ui-stack-title">{item.title}</p>
-          <p className="hero-ui-stack-desc">{item.desc}</p>
-        </div>
-      ))}
-    </div>
-  )
-}
-
-function DevOpsVisual() {
-  return (
-    <div className="hero-ui-list">
-      <p className="hero-ui-list-label">Pipeline stack</p>
-      {DEVOPS_ITEMS.map((item) => (
-        <div key={item.name} className="hero-ui-list-row">
-          <div className="hero-ui-list-avatar" aria-hidden="true">
-            {item.name.charAt(0)}
-          </div>
-          <div className="hero-ui-list-meta">
-            <p className="hero-ui-list-name">{item.name}</p>
-            <p className="hero-ui-list-role">{item.role}</p>
-          </div>
-          <span className="hero-ui-list-status">{item.status}</span>
-        </div>
-      ))}
-    </div>
-  )
-}
-
-const CARD_CONTENT = {
-  appdev: {
-    className: 'hero-float-card--appdev',
-    zIndex: 1,
-    heading: 'Ship Apps Users Love',
-    subtext: 'Streamline mobile delivery from idea to app store.',
-    Visual: AppDevVisual,
+const PILL_CARDS = [
+  {
+    id: 'cloud',
+    title: 'Cloud Solutions',
+    subtitle: 'Scalable • Secure • Reliable',
+    offset: 'mr-24',
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+      </svg>
+    )
   },
-  devops: {
-    className: 'hero-float-card--devops',
-    zIndex: 2,
-    heading: 'Deploy With Confidence',
-    subtext: 'Stay connected with secure, automated infrastructure.',
-    Visual: DevOpsVisual,
+  {
+    id: 'security',
+    title: 'Cyber Security',
+    subtitle: 'Protect • Detect • Respond',
+    offset: 'mr-6',
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    )
   },
-}
+  {
+    id: 'software',
+    title: 'Custom Software',
+    subtitle: 'Build • Innovate • Grow',
+    offset: '-mr-4',
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+      </svg>
+    )
+  },
+  {
+    id: 'digital',
+    title: 'Digital Transformation',
+    subtitle: 'Automate • Optimize • Evolve',
+    offset: 'mr-12',
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      </svg>
+    )
+  }
+]
 
 export default function HeroFloatingCards() {
-  const categories = getHeroWorkCategories()
-
-  if (categories.length === 0) return null
-
   return (
-    <div className="hero-float-stage" aria-label="Our work categories">
-      <div className="hero-float-stack">
-        {categories.map((category) => {
-          const content = CARD_CONTENT[category.id] ?? CARD_CONTENT.appdev
-          const Visual = content.Visual
-
-          return (
-            <Link
-              key={category.id}
-              to="/project-work"
-              className={`hero-float-card ${content.className}`}
-              style={{ zIndex: content.zIndex }}
-            >
-            <div className="hero-float-card-top">
-              <span className="hero-float-card-tag">{category.tag}</span>
-              <p className="hero-float-card-heading">{content.heading}</p>
-              <p className="hero-float-card-subtext">{content.subtext}</p>
-            </div>
-            <div className="hero-float-card-panel">
-              <Visual />
-            </div>
-          </Link>
-        )
-      })}
-      </div>
+    <div className="relative w-full flex flex-col items-end gap-6 z-10">
+      {PILL_CARDS.map((card) => (
+        <Link
+          key={card.id}
+          to="/services"
+          className={`flex items-center gap-4 bg-white/95 backdrop-blur-md rounded-2xl px-5 py-3.5 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white/20 transition-transform hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(89,37,173,0.15)] ${card.offset}`}
+        >
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#5925ad]/10 text-[#5925ad]">
+            {card.icon}
+          </div>
+          <div>
+            <p className="text-sm font-bold text-[#0e1b26]">{card.title}</p>
+            <p className="text-[0.65rem] uppercase tracking-wider text-[#0e1b26]/50 mt-0.5 font-semibold">
+              {card.subtitle}
+            </p>
+          </div>
+        </Link>
+      ))}
     </div>
   )
 }

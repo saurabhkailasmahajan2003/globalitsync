@@ -227,28 +227,30 @@ function ContactSidebar({ isPage }) {
           />
         ))}
 
-        <ContactMethodCard
-          href={`mailto:${CONTACT_EMAIL}`}
-          label="Email"
-          value={CONTACT_EMAIL}
-          icon={
-            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path
-                d="M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M5 7l7 5 7-5"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          }
-        />
+        {CONTACT_EMAIL && (
+          <ContactMethodCard
+            href={`mailto:${CONTACT_EMAIL}`}
+            label="Email"
+            value={CONTACT_EMAIL}
+            icon={
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M5 7l7 5 7-5"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            }
+          />
+        )}
 
         <ContactMethodCard
           href={SOCIAL_LINKS.whatsapp}

@@ -47,7 +47,7 @@ function RingText({ pathId, ringText }) {
     return (
       <text
         key={`${pathId}-${wordIndex}`}
-        fill="#007ffc"
+        fill="#5925ad"
         fontSize={fontSize}
         fontWeight="900"
         fontFamily="DM Sans, system-ui, sans-serif"
