@@ -1,4 +1,4 @@
-export const CONTACT_PHONES = ['9763684771']
+export const CONTACT_PHONES = ['9763684771', '9527352323']
 
 export const CONTACT_EMAIL = ''
 

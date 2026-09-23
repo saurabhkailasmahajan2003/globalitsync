@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import emailjs from '@emailjs/browser'
 import { BTN_PRIMARY, BTN_PRIMARY_BLOCK } from '../config/ui.js'
 import {
   CONTACT_EMAIL,
@@ -28,9 +27,6 @@ const SERVICE_TAGS = [
   'Other',
 ]
 
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
 const TRUST_POINTS = [
   'Response within one business day',
@@ -556,39 +552,34 @@ export default function Contact() {
       return
     }
 
-    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
-      setError('Email service is not configured. Please add EmailJS keys to your .env file.')
-      return
-    }
-
     setIsSubmitting(true)
 
     try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        {
-          first_name: formData.firstName,
-          last_name: formData.lastName,
+      const response = await fetch('https://api.growwcode.com/api', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
           email: formData.email,
           mobile: formData.mobile,
           address: formData.address,
           services: selectedServices.join(', '),
-          business_name: formData.businessName || 'Not provided',
+          businessName: formData.businessName || 'Not provided',
           message: formData.message,
-        },
-        EMAILJS_PUBLIC_KEY,
-      )
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
 
       setSubmitted(true)
     } catch (err) {
-      console.error('EmailJS error:', err)
-      const detail = err?.text?.trim()
-      setError(
-        import.meta.env.DEV && detail
-          ? `Email failed: ${detail}`
-          : 'Something went wrong. Please try again or call us directly.',
-      )
+      console.error('API error:', err)
+      setError('Something went wrong. Please try again or call us directly.')
     } finally {
       setIsSubmitting(false)
     }
