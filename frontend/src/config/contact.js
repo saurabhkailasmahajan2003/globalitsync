@@ -6,7 +6,7 @@ export const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/company/globalitsync-com/',
   instagram: 'https://www.instagram.com/globalitsync.tech',
   facebook: 'https://www.facebook.com/share/1Bg4m8eWBA/',
-  whatsapp: `https://wa.me/91${CONTACT_PHONES[0]}`,
+  whatsapp: 'https://wa.me/353892550760',
 }
 
 export const SOCIAL_PROFILES = [

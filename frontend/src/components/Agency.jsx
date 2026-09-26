@@ -1,5 +1,6 @@
 import AgencyStats from './AgencyStats.jsx'
 import { useScrollReveal } from '../hooks/useScrollReveal.js'
+import { Link } from 'react-router-dom'
 
 const WHO_WE_ARE_IMAGE =
   'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780835835/585a66a6-f233-48c2-a870-caf66935ce63.png'

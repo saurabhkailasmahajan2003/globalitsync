@@ -1,5 +1,6 @@
 import Hero from '../components/Hero.jsx'
 import Agency from '../components/Agency.jsx'
+import InternshipPromo from '../components/InternshipPromo.jsx'
 import Services from '../components/Services.jsx'
 import WhyChoose from '../components/WhyChoose.jsx'
 import Contact from '../components/Contact.jsx'
@@ -13,6 +14,7 @@ export default function HomePage() {
       <SEO {...PAGE_SEO.home} />
       <Hero />
       <Agency />
+      <InternshipPromo />
       <Services />
       <WhyChoose />
       <Contact />

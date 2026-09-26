@@ -9,70 +9,124 @@ function FooterSocialLink({ href, label, children }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-brand-100 bg-white text-gc-navy/65 transition-all hover:border-gc-blue/30 hover:text-gc-blue hover:shadow-sm"
+      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-slate-400 transition-all hover:bg-gc-blue hover:text-white hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(124,58,237,0.5)]"
     >
       {children}
     </a>
   )
 }
 
+function FooterLink({ to, children }) {
+  return (
+    <Link 
+      to={to} 
+      className="text-sm text-slate-400 transition-colors hover:text-white flex items-center gap-2 group"
+    >
+      <span className="h-px w-0 bg-gc-blue transition-all group-hover:w-3"></span>
+      {children}
+    </Link>
+  )
+}
+
 export default function Footer() {
   return (
-    <footer className="border-t border-brand-100 bg-white pb-[calc(1.5rem+var(--contact-notch-height)+env(safe-area-inset-bottom,0px))] pt-10">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-          <Link to="/" className="inline-flex shrink-0 items-center">
-            <img src={LOGO_URL} alt="GlobalItSync" className="h-5 w-auto sm:h-6" />
-          </Link>
-
-          <div className="flex gap-3">
-            <FooterSocialLink href={SOCIAL_LINKS.linkedin} label="LinkedIn">
-              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
-            </FooterSocialLink>
-
-            <FooterSocialLink href={SOCIAL_LINKS.instagram} label="Instagram">
-              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-              </svg>
-            </FooterSocialLink>
-
-            <FooterSocialLink href={SOCIAL_LINKS.facebook} label="Facebook">
-              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-              </svg>
-            </FooterSocialLink>
-
-            <FooterSocialLink href={SOCIAL_LINKS.whatsapp} label="WhatsApp">
-              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-              </svg>
-            </FooterSocialLink>
+    <footer className="bg-gc-navy pt-20 pb-10 border-t border-white/5 relative overflow-hidden">
+      {/* Decorative gradients */}
+      <div className="absolute top-0 left-1/4 h-px w-1/2 bg-gradient-to-r from-transparent via-gc-blue to-transparent opacity-50" />
+      <div className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-gc-blue/10 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 -left-40 h-[300px] w-[300px] rounded-full bg-gc-blue/5 blur-[100px] pointer-events-none" />
+      
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
+          
+          {/* Brand Column */}
+          <div className="lg:col-span-2">
+            <Link to="/" className="inline-flex items-center justify-center px-6 py-4 rounded-2xl bg-white shadow-[0_0_20px_rgba(124,58,237,0.15)] hover:shadow-[0_0_30px_rgba(124,58,237,0.4)] transition-all mb-8 relative group overflow-hidden border border-white/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-violet-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <img 
+                src={LOGO_URL} 
+                alt="GlobalItSync" 
+                className="h-8 w-auto relative z-10 transition-transform group-hover:scale-105" 
+              />
+            </Link>
+            <p className="text-sm leading-relaxed text-slate-400 max-w-sm mb-8">
+              Empowering businesses through innovative digital solutions. We specialize in custom software, cloud architecture, and AI-driven applications that scale with your ambitions.
+            </p>
+            <div className="flex gap-4">
+              <FooterSocialLink href={SOCIAL_LINKS.linkedin} label="LinkedIn">
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </FooterSocialLink>
+              <FooterSocialLink href={SOCIAL_LINKS.instagram} label="Instagram">
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+              </FooterSocialLink>
+              <FooterSocialLink href={SOCIAL_LINKS.facebook} label="Facebook">
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </FooterSocialLink>
+              <FooterSocialLink href={SOCIAL_LINKS.whatsapp} label="WhatsApp">
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+              </FooterSocialLink>
+            </div>
+          </div>
+          
+          {/* Links Columns */}
+          <div className="lg:pl-8">
+            <h3 className="text-sm font-bold text-white mb-6 uppercase tracking-widest">Services</h3>
+            <ul className="space-y-4 flex flex-col">
+              <li><FooterLink to="/custom-software-development">Custom Software</FooterLink></li>
+              <li><FooterLink to="/web-development-services">Web Development</FooterLink></li>
+              <li><FooterLink to="/mobile-app-development">Mobile Apps</FooterLink></li>
+              <li><FooterLink to="/ai-ml-projects">AI & ML Solutions</FooterLink></li>
+              <li><FooterLink to="/aws-cloud-services">Cloud Services</FooterLink></li>
+            </ul>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/#agency" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
-              About
-            </Link>
-            <Link to="/project-work" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
-              Work
-            </Link>
-            <Link to="/services" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
-              Services
-            </Link>
-            <Link to="/industries" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
-              Industries
-            </Link>
-            <Link to="/contact" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
-              Contact
-            </Link>
+          <div>
+            <h3 className="text-sm font-bold text-white mb-6 uppercase tracking-widest">Company</h3>
+            <ul className="space-y-4 flex flex-col">
+              <li><FooterLink to="/">Home</FooterLink></li>
+              <li><FooterLink to="/project-work">Our Portfolio</FooterLink></li>
+              <li><FooterLink to="/industries">Industries</FooterLink></li>
+              <li><FooterLink to="/internship">Academy</FooterLink></li>
+              <li><FooterLink to="/contact">Contact</FooterLink></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold text-white mb-6 uppercase tracking-widest">Contact</h3>
+            <ul className="space-y-4 flex flex-col">
+              <li>
+                <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-gc-blue">
+                  Get in touch
+                </Link>
+              </li>
+              <li className="pt-2">
+                <p className="text-xs text-slate-500 uppercase tracking-widest mb-1">Email</p>
+                <a href="mailto:hello@globalitsync.com" className="text-sm text-slate-400 transition-colors hover:text-white">
+                  hello@globalitsync.com
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <p className="mt-8 text-center text-sm text-gc-navy/50">
-          &copy; {new Date().getFullYear()} GlobalItSync. All rights reserved.
-        </p>
+        {/* Bottom Bar */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-white/10 mt-12 pb-[env(safe-area-inset-bottom,0px)]">
+          <p className="text-xs text-slate-500">
+            &copy; {new Date().getFullYear()} GlobalItSync. All rights reserved.
+          </p>
+          <div className="flex gap-6">
+            <Link to="/" className="text-xs text-slate-500 hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/" className="text-xs text-slate-500 hover:text-white transition-colors">Terms of Service</Link>
+          </div>
+        </div>
       </div>
     </footer>
   )

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import emailjs from '@emailjs/browser'
 import { BTN_PRIMARY, BTN_PRIMARY_BLOCK } from '../config/ui.js'
 import {
   CONTACT_EMAIL,
@@ -35,7 +36,7 @@ const TRUST_POINTS = [
 ]
 
 const inputClassName =
-  'w-full rounded-xl border border-slate-200/90 bg-white px-4 py-3 text-sm text-gc-navy placeholder:text-gc-navy/35 outline-none transition-all focus:border-gc-blue focus:ring-4 focus:ring-gc-blue/10'
+  'block w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3.5 text-sm text-gc-navy placeholder:text-slate-400 outline-none transition-all hover:bg-slate-50 focus:border-gc-blue focus:bg-white focus:ring-4 focus:ring-gc-blue/10'
 
 function FormField({ label, htmlFor, required, hint, children }) {
   return (
@@ -251,7 +252,7 @@ function ContactSidebar({ isPage }) {
         <ContactMethodCard
           href={SOCIAL_LINKS.whatsapp}
           label="WhatsApp"
-          value={formatPhone(CONTACT_PHONES[0])}
+          value="+353 89 255 0760"
           external
           icon={
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -555,31 +556,31 @@ export default function Contact() {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch('https://api.growwcode.com/api', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          mobile: formData.mobile,
-          address: formData.address,
-          services: selectedServices.join(', '),
-          businessName: formData.businessName || 'Not provided',
-          message: formData.message,
-        }),
-      });
+      const templateParams = {
+        name: `${formData.firstName} ${formData.lastName}`, // Kept for backwards compatibility if your template uses {{name}}
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        mobile: formData.mobile,
+        address: formData.address,
+        services: selectedServices.join(', '),
+        businessName: formData.businessName || 'Not provided',
+        message: formData.message,
+      };
 
-      if (!response.ok) {
-        throw new Error('Failed to send message');
-      }
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        }
+      );
 
       setSubmitted(true)
     } catch (err) {
-      console.error('API error:', err)
-      setError('Something went wrong. Please try again or call us directly.')
+      console.error('EmailJS error:', err)
+      setError(`EmailJS Error: ${err.text || err.message || 'Something went wrong. Please try again or call us directly.'}`)
     } finally {
       setIsSubmitting(false)
     }
@@ -590,12 +591,12 @@ export default function Contact() {
       <>
         <ContactHero />
 
-        <section id="contact" className="relative bg-[#f7f9fc] pb-20 pt-2 lg:pb-28">
+        <section id="contact" className="relative bg-[#f7f9fc] pb-16 pt-2 lg:pb-28">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(0,127,252,0.08),transparent_70%)]" />
 
-          <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.35fr)] lg:gap-10 xl:gap-14">
-              <div className="lg:sticky lg:top-24">
+              <div className="lg:sticky lg:top-24 mt-8 lg:mt-0">
                 <p className="text-sm font-semibold uppercase tracking-wider text-gc-blue">
                   Direct contact
                 </p>
@@ -608,10 +609,11 @@ export default function Contact() {
                 <ContactSidebar isPage />
               </div>
 
-              <div className="rounded-3xl border border-white/80 bg-white p-6 shadow-xl shadow-gc-navy/5 sm:p-8 lg:p-10">
-                <div className="mb-8 border-b border-slate-100 pb-6">
-                  <h2 className="text-xl font-bold text-gc-navy sm:text-2xl">Start your project</h2>
-                  <p className="mt-2 text-sm leading-relaxed text-gc-navy/60">
+              <div className="rounded-3xl border border-white bg-white/80 backdrop-blur-2xl p-5 sm:p-10 lg:p-12 shadow-2xl shadow-gc-blue/10 relative overflow-hidden w-full">
+                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-gc-blue to-purple-500"></div>
+                <div className="mb-8 border-b border-slate-200/60 pb-6">
+                  <h2 className="text-2xl font-bold text-gc-navy sm:text-3xl">Start your project</h2>
+                  <p className="mt-3 text-sm sm:text-base leading-relaxed text-gc-navy/60">
                     Fill in the details below and we&apos;ll schedule a consultation to discuss your
                     requirements.
                   </p>
@@ -637,10 +639,10 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-brand-50 pt-10 pb-20 lg:pt-12 lg:pb-28">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+    <section id="contact" className="bg-brand-50 pt-8 pb-16 sm:pt-10 sm:pb-20 lg:pt-12 lg:pb-28">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
-          <div>
+          <div className="mt-4 sm:mt-0">
             <p className="text-sm font-semibold uppercase tracking-wider text-gc-blue">Contact us</p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gc-navy sm:text-4xl">
               Get in touch
@@ -653,7 +655,8 @@ export default function Contact() {
             <ContactSidebar isPage={false} />
           </div>
 
-          <div className="rounded-2xl border border-white/80 bg-white p-6 shadow-lg shadow-gc-navy/5 sm:p-8">
+          <div className="rounded-3xl border border-white bg-white/80 backdrop-blur-2xl p-5 sm:p-10 shadow-2xl shadow-gc-blue/10 relative overflow-hidden w-full">
+            <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-gc-blue to-purple-500"></div>
             <ContactForm
               formData={formData}
               selectedServices={selectedServices}
