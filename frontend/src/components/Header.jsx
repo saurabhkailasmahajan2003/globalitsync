@@ -5,9 +5,9 @@ import { BTN_PRIMARY_BLOCK, BTN_PRIMARY_NAV } from '../config/ui.js'
 
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
-  { label: 'Agency', to: '/#agency' },
   { label: 'Services', to: '/services' },
   { label: 'Industries', to: '/industries' },
+  { label: 'Internship', to: '/internship' },
   { label: 'Contact', to: '/contact' },
 ]
 

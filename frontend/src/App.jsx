@@ -18,6 +18,7 @@ import AWSCloudServicesPage from './pages/AWSCloudServicesPage.jsx'
 import AiMlProjectsPage from './pages/AiMlProjectsPage.jsx'
 import AiAgentsPage from './pages/AiAgentsPage.jsx'
 import ItConsultingPage from './pages/ItConsultingPage.jsx'
+import InternshipPage from './pages/InternshipPage.jsx'
 import './styles/components.css'
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
             <Route path="/ai-ml-projects" element={<AiMlProjectsPage />} />
             <Route path="/ai-agents" element={<AiAgentsPage />} />
             <Route path="/it-consulting" element={<ItConsultingPage />} />
+            <Route path="/internship" element={<InternshipPage />} />
           </Routes>
         </main>
         <ContactNowNotch />
